@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon</title>
+    <script src="../js/simon.js" defer></script>
+    <link rel="shortcut icon" href="../img/iconSimon.png" type="image/png">
+    <link rel="stylesheet" href="../css/simon.css" />
+</head>
+<body>
+    <div class="box_continer">
+        <div class="lives">
+            <div class="live"></div>
+            <div class="live"></div>
+            <div class="live"></div>
+        </div>
+        <div class="tap"></div>
+        <div class="game">
+            <div id="red" class="color"></div>
+            <div id="blue" class="color"></div>
+            <div id="yellow" class="color"></div>
+            <div id="green" class="color"></div>
+        </div>
+        <div class="mes"></div>
+        <div class="timer"></div>
+        <div class="timer2"></div>
+        <div class="start"><b>GAME START</b></div>
+        <div class="buttons">
+            <div class="restart button"><b>Restart</b></div>
+            <div class="loby button"><b>Home</b></div>
+            <div class="exit button"><b>Exit</b></div>
+        </div>
+        <div class="run"></div>
+    <audio id="redSound" class="sound">
+        <source src="../audio/do.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="blueSound" class="sound">
+        <source src="../audio/re.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="yellowSound" class="sound">
+        <source src="../audio/fa.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="greenSound" class="sound">
+        <source src="../audio/mi.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="gameOverSound">
+        <source src="../audio/gameOver.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="wrongSound">
+        <source src="../audio/wrong.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="wellDoneSound">
+         <source src="../audio/wellDone.WAV" type="audio/mpeg" />
+    </audio>
+     <audio id="loadingSound">
+         <source src="../audio/simonSound.mp3" type="audio/mpeg" />
+    </audio>
+    <div class="loading"></div>
+    </div>
+</body>
+</html>

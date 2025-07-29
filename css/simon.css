@@ -1,0 +1,238 @@
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Tekton Pro';
+ }
+.box_continer {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../img/backgroundGame2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+     position: relative;
+ }
+
+.loading{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../gif/loading.gif);
+    background-repeat: no-repeat;
+    background-size: 50%,100%;
+    background-position: center;
+    display: none;
+    position: fixed;
+    background-color: black;
+}
+
+.tap{
+    height: 5vh;
+    width: 5vh;
+    background-image: url(../gif/tap.gif);
+    background-repeat: no-repeat;
+    background-size: 5vh,5vh;
+    position: absolute;
+    top:22vh;
+    left:38vw
+}
+
+ .color {
+    height: 15vh;
+    width: 15vh;
+    border-radius: 50%;
+    box-shadow:
+        inset -5px -5px 15px rgba(0, 0, 0, 0.4),
+        5px 5px 15px rgba(0, 0, 0, 0.3);  
+    border: 2px solid #333;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+ #red {
+     background-color: #EE1A24;
+     position: absolute;
+     top: 32vh;
+     right: 32vw;
+ }
+
+ #blue {
+     background-color: #018CC9;
+     position: absolute;
+     top: 32vh;
+     left: 32vw;
+ }
+
+ #yellow {
+     background-color: #FFF300;
+     position: absolute;
+     top: 50vh;
+     left: 28vw;
+ }
+
+ #green {
+     background-color: #3CB72A;
+     position: absolute;
+     top: 50vh;
+     right: 28vw;
+ }
+
+ .lives {
+     display: flex;
+     flex-direction: raw;
+ }
+
+ .live {
+     background-image: url("../gif/life.gif");
+     height: 130px;
+     width: 100px;
+     background-repeat: no-repeat;
+     background-size: 100px, 130px;
+ }
+
+ .mes {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     height: 350px;
+     width: 350px;
+     border-radius: 50%;
+     z-index: 100;
+     background-size: 350px,350px;
+     background-repeat: no-repeat;
+     background-position: center;
+ }
+
+ .timer {
+     background-image: url(../img/timer.png);
+     position: absolute;
+     bottom: 30px;
+     left: 0;
+     height: 150px;
+     width: 150px;
+     border-radius: 50%;
+     background-repeat: no-repeat;
+     font-size: 6rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #018CC9;
+ }
+
+ .start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     color: #81c8fe;
+     width: 5vw;
+     height: 10vh;
+     text-align: center;
+     position: absolute;
+     top:13vh;
+     left: 33vw;
+     background-color: #FFF300;
+     border-radius: 50%;
+     font-family: 'More Sugar', sans-serif;
+ }
+
+ .activegreen {
+    filter: brightness(2);
+    box-shadow:
+        0 0 20px 10px #3CB72A,
+        inset 0 0 10px #69ff52;
+    transform: scale(1.05);
+}
+.activered {
+    filter: brightness(2);
+    box-shadow:
+        0 0 20px 10px #EE1A24,
+        inset 0 0 10px #ff4751;
+    transform: scale(1.05);
+}
+.activeblue {
+    filter: brightness(2);
+    box-shadow:
+        0 0 20px 10px #018CC9,
+        inset 0 0 10px #23bdff;
+    transform: scale(1.05);
+}
+.activeyellow {
+    filter: brightness(2);
+    box-shadow:
+        0 0 20px 10px #FFF300,
+        inset 0 0 10px #fff75f;
+    transform: scale(1.05);
+}
+
+.buttons{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.button{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 10px;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.restart{
+    background-color: #FFF300;
+}
+.loby{
+    background-color: #EE1A24;
+}
+.exit{
+    background-color: #018CC9;
+}
+
+
+
+@media only screen and (max-width: 980px){
+   .mes {
+        height: 300px;
+        width: 300px;
+        background-size: 300px, 300px;
+   }
+    .color {
+    height: 12vh;
+    width: 12vh;
+   }
+   .start {
+        font-size: 0.8rem;
+   }
+}
+@media only screen and (max-width: 768px){
+    .mes {
+        height: 250px;
+        width: 250px;
+        background-size: 250px, 250px;
+   }
+
+   .color {
+    height: 10vh;
+    width: 10vh;
+   }
+    
+    #yellow {
+        top: 45vh;
+        left: 28vw;
+    }
+
+    #green {
+        top: 45vh;
+        right: 28vw;
+    }
+
+    .start {
+        font-size: 1.8vw;
+   }
+ }

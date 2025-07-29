@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jungle Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="jungle-background">
+  <div class="container">
+    <div class="animal">🦁🐵🦜</div>
+    <h1>Jungle Login</h1>
+    <input type="text" id="name" placeholder="Enter your name" />
+    <br />
+    <input type="password" id="passWord" placeholder="Enter your password" />
+    <br />
+    <button onclick="log_in()">Login</button>
+    <button onclick="register()">Register</button>
+  </div>
+
+  <script>
+    const getUsers = () => {
+      return JSON.parse(localStorage.getItem("users") || "[]");
+    };
+
+    const findUsers = (userName, passWord) => {
+      const userArr = getUsers();
+      return userArr.find(user => user.name === userName && user.password === passWord);
+    };
+
+    const log_in = () => {
+      const name = document.getElementById("name").value;
+      const password = document.getElementById("passWord").value;
+
+      if (findUsers(name, password)) {
+        localStorage.setItem("loggedUser", name);
+        window.location.href = "home.html";
+      } else {
+        alert("You need to register first.");
+      }
+    };
+
+    const register = () => {
+      const name = document.getElementById("name").value;
+      const password = document.getElementById("passWord").value;
+
+      if (!name || !password) {
+        alert("Fields are required");
+        return;
+      }
+
+      if (findUsers(name, password)) {
+        alert("You already registered, please login");
+        return;
+      }
+
+      const user = { name, password };
+      const userArr = getUsers();
+      userArr.push(user);
+      localStorage.setItem("users", JSON.stringify(userArr));
+      alert("Registered successfully! Now you can log in.");
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>משחק זיכרון - ג'ונגל</title>
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+      
+  <!-- סרטון ג'ונגל ברקע -->
+  <video autoplay muted loop id="background-video">
+    <source src="image/vecteezy_ai-generative-a-jungle-scene-with-a-waterfall-and-red-leaves_32167850.mp4" type="video/mp4">
+  </video>
+  <!-- לוח המשחק -->
+  <div class="board">
+    <!-- כרטיסי המשחק ייווצרו כאן באמצעות JavaScript -->
+  </div>
+  <div id="play-music" >
+    🎵
+  </div>
+  
+  <audio id="background-music" loop>
+    <source src="רקע.mp3" type="audio/mpeg">
+  </audio>
+  
+  <script>
+    document.getElementById("play-music").addEventListener("click", function() {
+      const music = document.getElementById("background-music");
+      music.play();
+    });
+  </script>
+  
+  
+  <script src="game.js"></script>
+</body>
+</html>
