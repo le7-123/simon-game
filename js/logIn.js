@@ -29,7 +29,7 @@ form.addEventListener("submit", (e) => {
         }
         if(i===users.length){
             alert("שם המשתמש אינו קיים במערכת\n עבור לדף ההרשמה🔙")
-            window.location.href="../html/index.html"
+            window.location.href="../html/register.html"
         }
     }
     
