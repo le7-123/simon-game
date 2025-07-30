@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>דף עם ניווט ועיצוב</title>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body, html {
+    height: 100%;
+    font-family: 'Tekton Pro', Arial, sans-serif;
+    direction: rtl; /* למעבר לעברית */
+  }
+
+  /* רקע כללי עם תמונה וגוונים */
+  .box_continer {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/img/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #c02283;
+    background-color: #00031cfb; /* שחור עם שקיפות */
+  }
+
+  /* עיצוב הניווט */
+  nav {
+    background-color: rgba(0, 7, 71, 0.85); /* כחול כהה שקוף */
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* נווט מימין לשמאל */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+  }
+
+  nav a {
+    color: #c02283;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 10px;
+    font-size: 1.3rem;
+  }
+
+  nav a:hover {
+    background-color: #c02283;
+    color: #fff;
+  }
+
+  /* הקופסה המרכזית */
+  h1{
+    align-items: center;
+    justify-content: center;
+    font-family: 'Tekton Pro';
+    text-align: center;
+    color: #c02283;
+    font-size: 10rem;
+  }
+
+  button {
+    border-radius: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #000747;
+    color: #724f65;
+    height: 40px;
+    width: 90%;
+    box-shadow: 0px 0px 10px black;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #34204d;
+  }
+
+  .register {
+    border-radius: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    height: 30px;
+    width: 90%;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  @media only screen and (max-width: 322px) {
+    .logIn {
+      width: 90%;
+      height: auto;
+    }
+    nav a {
+      font-size: 1rem;
+      padding: 8px 10px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="box_continer">
+
+  <nav>
+    <a href="./html/register.html">הרשמה</a>
+    <a href="./html/logIn.html">כניסה</a>
+  </nav>
+
+    <h1>ברוכים הבאים!</h1>
+
+</div>
+
+</body>
+</html>
