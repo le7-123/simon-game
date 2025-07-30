@@ -62,7 +62,7 @@ loby.addEventListener("click", () =>{
 })
 exit.addEventListener("click", () =>{
     newRecord()
-    window.location.href="login.html"
+    window.location.href="logIn.html"
 })
 
 // לחיצה על כפתור Start להתחלת המשחק
